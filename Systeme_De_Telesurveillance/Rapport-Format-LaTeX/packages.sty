@@ -1,0 +1,97 @@
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{arabtex}
+\usepackage[arabic,french,english]{babel}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue}
+\usepackage{csquotes}% pour la gestion des guillemets français.
+\usepackage{tikz-qtree}
+\usepackage{listings}
+\lstdefinestyle{CStyle}{
+	language=C,
+	commentstyle=\color{green},
+	keywordstyle=\color{blue},
+	numberstyle=\tiny\color{gray},
+	stringstyle=\color{red},
+	basicstyle=\footnotesize\ttfamily,
+	backgroundcolor=\color{gray!10},
+	frame=single,
+	frameround=tttt,
+	rulecolor=\color{black},
+	upquote=true,
+	escapeinside={(*}{*)},
+	aboveskip=10pt,
+	belowskip=10pt,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbers=left,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=4
+}
+\usepackage{xcolor}
+
+
+
+
+\usepackage{pgfornament,xcolor}
+\usepackage{amsmath,amssymb,tikz} 
+\usepackage{pifont,frcursive}
+
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[top=1.5cm,bottom=1cm,right=1cm,left=1cm]{geometry}
+
+\pagestyle{empty}
+\usetikzlibrary{backgrounds,shadings,calc}
+
+\colorlet{fff}{white!30!black!40}
+\colorlet{ggg}{fff!80!black}
+
+\tikzstyle{a}=[draw=ggg,right color=ggg,left color=ggg!50!black]
+\tikzstyle{b}=[draw=ggg,right color=fff,left color=fff!25]
+\newdimen\bv
+
+
+\renewcommand\thesection{\textcolor{red}{\Roman{section}-}}
+\renewcommand\thesubsection{\textcolor{yellow}{\roman{subsection})}}
+\renewcommand\thesubsubsection{\Alph{subsubsection}}
+
+
+
+\bv=1.5cm
+\def\titlebox#1{%
+	\begin{tikzpicture}
+		\node[minimum width=0.75\linewidth,align=center,font=\bfseries\huge] (1) {#1};
+		\begin{scope}[on background layer]
+			\coordinate (a) at($(1.south east)+(-.25\bv,-.25\bv)$);
+			\coordinate (b) at($(a)+(.5\bv,0)$);
+			\coordinate (e) at($(1.south west)+(.25\bv,.25\bv)$);
+			\coordinate (d) at($(1.north west)+(0,.25\bv)$);
+			\coordinate (c) at($(d)+(.25\bv,0)$);
+			\coordinate (f) at($(d)+(-.25\bv,0)$);
+			\path [draw=ggg,right color=fff,left color=fff,middle color=white](f)arc(180:270:.25\bv)--(1.north east)arc(90:0:.25\bv)--(b)arc(0:90:.25\bv)--(1.south west)arc(-90:-180:.25\bv)--cycle;
+			\path [a] (d)-|(e)arc(0:-180:.125\bv)--cycle;
+			\path [b](c)--(e)arc(0:180:.25\bv)--(f)arc(180:0:.25\bv)--cycle;
+			\path [b](a)|-(1.south east)--+(0,-.25\bv)arc(0:180:.125\bv)--cycle;
+			\path[a](1.south east)arc(90:-180:.25\bv)arc(180:0:.125\bv)--cycle;
+		\end{scope}
+	\end{tikzpicture}
+}
+\def\shape#1{\scalebox{#1}{%
+		\begin{tikzpicture}
+			\node[circle,fill=cyan!75!fff,inner sep=4mm](5){};
+			\foreach \i in {0,1,2}{
+				\fill[cyan!75!fff,transform canvas={rotate=-\i*45}](5.east)to[bend left=45]+(3,0)to[bend left=45]cycle;
+			}
+		\end{tikzpicture}
+}}
+
+\def\size{1}
+\parindent=0mm

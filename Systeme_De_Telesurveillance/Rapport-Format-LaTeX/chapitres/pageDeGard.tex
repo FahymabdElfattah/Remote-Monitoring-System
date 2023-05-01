@@ -1,0 +1,60 @@
+\begin{tikzpicture}[remember picture,overlay]
+	\coordinate(1)at ([shift={(225:\size)}]current page.north east);
+	\coordinate(2)at ([shift={(-45:\size)}]current page.north west);
+	\coordinate(3)at ([shift={(45:\size)}]current page.south west);
+	\coordinate(4)at ([shift={(135:\size)}]current page.south east);
+	\foreach \i in {0,1,...,60}{\foreach \j/\k in {1/4,2/3}{
+			\path(\j)--node[pos=\i/60]{\shape{0.1}}(\k);
+	}}
+	\foreach \i in {1,2,...,45}{\foreach \j/\k in {1/2,4/3}{
+			\path(\j)--node[pos=\i/45]{\shape{0.1}}(\k);
+	}}
+\end{tikzpicture}
+{\includegraphics[scale =0.5]{chapitres/images/inpt.png}} \hfill
+\hspace{-2cm}
+\begin{minipage}[c]{10cm}
+	\centering \bf
+	 
+	Institut National des postes \\
+	et télécommunications Rabat \\
+	Filière Systèmes Embraqués \\
+	et Services Numériques
+\end{minipage}
+\hfill
+\hspace{-2cm}
+{\includegraphics[scale =0.4 ]{chapitres/images/anrt.png}
+	\vglue5mm
+	\centering\vglue3cm\sl
+	\underline{\bf\Large RAPPORT DE STAGE D'INITIATION }\newline
+	 Effectué au sein de l’entreprise Molbiol Expert 
+	 
+	\vglue5mm
+	\vspace{2cm}
+	\begin{center}
+		
+		\vskip3mm
+		\titlebox{%  
+			Système de télésurveillance pour \\le suivi des patients atteints \\ de maladies cardiaques
+		}
+	\end{center}
+	\vglue5mm
+	\vskip5mm
+	\vspace{0.2cm}
+	\vfill
+	\begin{minipage}[t]{10cm}
+		\underline{\bf  Présenté par:}\\[3mm]\bf
+		\begin{itemize}
+			\item FAHYM Abd Elfattah
+			
+		\end{itemize}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{5cm}
+		\underline{\bf Enquadré par:}\\[3mm]\bf
+		\hfill Mr.FAHYM Najim
+	\end{minipage}
+	\vfill
+	\vfill
+	\centering\bf
+	Année de formation : 2021/2022
+	\newpage

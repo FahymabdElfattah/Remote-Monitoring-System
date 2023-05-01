@@ -1,0 +1,50 @@
+
+\usetikzlibrary{fadings,backgrounds}
+\newcommand{\dhil}[1]{
+	\tikz[baseline=(txt.base)]{
+		\node[font=\bf ,inner sep=0pt] (txt) {
+			\resizebox{8cm}{2cm}{#1} };
+		\begin{scope}[on background layer]
+			\node[font=\bf ,inner sep=0pt,yscale=-.7, black!55, above, xslant=1,scope fading=south] at(txt.south){
+				\resizebox{8cm}{2cm}{#1} };
+		\end{scope}
+}}
+
+\thispagestyle{empty}
+\tikz[remember picture, overlay]{
+	\node[anchor=south west] at (current page.south west){
+		\pgfornament[width=10cm,symmetry=c]{42}
+	};
+	\node[anchor=north east] at (current page.north east){
+		\pgfornament[width=10cm,symmetry=none]{42}
+	};
+}
+\dhil{ Dédicace}
+%
+\vfill 
+\begin{center}
+	\parbox{.77\linewidth}{  \centering 
+		\baselineskip=8mm 
+		\fontfamily{pzc}\selectfont 
+		\Large 
+		Je dédie ce travail :
+		\\[5mm]
+		A ma chère mère Mme Aych Naima et à mon cher père M. FAHYM Mohamed qui n'ont jamais cessé
+		de me supporter, me soutenir et m'encourager durant mes années d'études.
+		Qu ils trouvent ici le témoignage de ma profonde gratitude et Teconnaissance
+		\\[5mm]
+		A mes frères, mes grands-parents et ma famille qui me donnent de l'amour et de la vivacité.
+		\\[5mm]
+		A tous ceur qui m'ont aidé - de près ou de loin - et ceur qui ont partagé avec moi les moments d'émotion lors de la réalisation de ce travail et qui m'ont chaleureusement supporté et encouragé tout au long de mon parcours.
+		\\[5mm]
+		A tous mes amis qui m'ont toujours encouragé, et à qui je souhaite plus de succès.
+		\\[5mm]
+		Merci!}
+\end{center}
+\vfill 
+\begin{flushright}
+	\fontsize{19}{15}\selectfont \bfseries \cursive 
+	FAHYM Abd Elfattah  \scalebox{2}{ \ding{45}}
+\end{flushright}
+\vskip11mm
+\newpage
