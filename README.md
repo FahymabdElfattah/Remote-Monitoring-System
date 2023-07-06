@@ -1,1 +1,5 @@
 # Remote-Monitoring-System
+
+During my internship at Molbiol Expert, I worked independently on a project involving the design and implementation of an innovative remote monitoring system for patients with cardiac diseases. Using electronic components such as the ESP8266 microcontroller and the SSD1306 I2C OLED display, I developed a high-performance and reliable system that collects real-time data from a smartwatch. The data is then transmitted via WiFi to the AWS IoT Core server for processing and analysis.
+
+The remote monitoring system I developed is capable of detecting critical situations and sending notifications to the patient's smartwatch as well as family members through calls or messages, enabling them to intervene quickly and potentially save the patient's life. This project allowed me to strengthen my skills in electronic design, programming, and teamwork. I take pride in having contributed to the creation of an innovative solution for remote monitoring of patients with cardiac diseases, providing them with an improved quality of life and enhanced safety.
